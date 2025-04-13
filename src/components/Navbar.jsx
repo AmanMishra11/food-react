@@ -1,6 +1,6 @@
-"use client"
 
 import { useState } from "react"
+import { Link } from "react-router-dom" 
 import "./Navbar.css"
 
 export default function Navbar() {
@@ -11,19 +11,20 @@ export default function Navbar() {
       <div className="navbar-container">
         <div className="navbar-content">
           <div className="navbar-logo">
-            <a href="/" className="logo-link">
+            <Link to="/" className="logo-link">
               <span className="logo-text">GeekFoods</span>
-            </a>
+            </Link>
           </div>
 
-          {/* Desktop navigation */}
+          {}
           <nav className="desktop-nav">
-            <a href="/" className="nav-link active">
+            <Link to="/" className="nav-link active">
               Home
-            </a>
-            <a href="/quote" className="nav-link">
+            </Link>
+            <Link to="/quote" className="nav-link">
               Quote
-            </a>
+            </Link>
+            {}
             <a href="/restaurants" className="nav-link">
               Restaurants
             </a>
@@ -35,32 +36,30 @@ export default function Navbar() {
             </a>
           </nav>
 
-          <div className="desktop-cta">
-            <a href="/login" className="cta-button">
-              Get Started
-            </a>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="mobile-menu-button">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="menu-toggle" aria-expanded="false">
-              <span className="sr-only">Open main menu</span>
-              {isMenuOpen ? <span className="icon-close">✕</span> : <span className="icon-menu">☰</span>}
-            </button>
-          </div>
+          {}
+          {}
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {}
+      <button
+        className="menu-toggle-button"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? "Close Menu" : "Open Menu"}
+      </button>
+      
+      {}
       {isMenuOpen && (
         <div className="mobile-menu">
           <div className="mobile-menu-links">
-            <a href="/" className="mobile-nav-link active">
+            <Link to="/" className="mobile-nav-link active">
               Home
-            </a>
-            <a href="/quote" className="mobile-nav-link">
+            </Link>
+            <Link to="/quote" className="mobile-nav-link">
               Quote
-            </a>
+            </Link>
+            {}
             <a href="/restaurants" className="mobile-nav-link">
               Restaurants
             </a>
@@ -79,4 +78,3 @@ export default function Navbar() {
     </header>
   )
 }
-

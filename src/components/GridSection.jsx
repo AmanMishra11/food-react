@@ -1,29 +1,28 @@
-import React from "react";
-import "./GridSection.css";
+import "./GridSection.css"
 
 export default function GridSection() {
   const items = [
     {
       title: "Delicious Meals",
       description: "Experience a variety of amazing dishes from different cultures around the world.",
-      image: "/images/delicious-meals.jpg"
+      image: "https://via.placeholder.com/600x400",
     },
     {
       title: "Fresh Ingredients",
       description: "Our meals are prepared with only the freshest ingredients to maintain quality and taste.",
-      image: "/images/fresh-ingredients.jpg"
+      image: "https://via.placeholder.com/600x400",
     },
     {
       title: "Expert Chefs",
       description: "Our chefs are trained professionals with years of experience in culinary arts.",
-      image: "/images/expert-chefs.jpg"
+      image: "https://via.placeholder.com/600x400",
     },
     {
       title: "Diverse Menu",
       description: "Choose from a diverse menu that caters to various dietary preferences and restrictions.",
-      image: "/images/diverse-menu.jpg"
-    }
-  ];
+      image: "https://via.placeholder.com/600x400",
+    },
+  ]
 
   return (
     <section className="grid-section">

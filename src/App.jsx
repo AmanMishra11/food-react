@@ -1,26 +1,17 @@
-import "./index.css"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import CardSection from "./components/CardSection"
-import GridSection from "./components/GridSection"
-import Footer from "./components/Footer"
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import QuotesApp from './QuotesApp';
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <main>
-        <Hero />
-        <CardSection />
-        <GridSection />
-      </main>
-      <Footer />
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quote" element={<QuotesApp />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
-
-
-
-
+export default App;
